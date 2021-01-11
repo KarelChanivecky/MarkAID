@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markaid - Criteria Management</title>
+    <link rel="stylesheet" href="./css/criteria_management.scss">
+    <link rel="stylesheet" href="css/common.scss">
+</head>
+<body>
+    <h1 class="title">MarkAID</h1>
+    <section id="control_section">
+        <button id="mark_btn">Mark</button>
+        <button id="import_btn">Import Criteria</button>
+        <button id="export_btn">Export Criteria</button>
+        <button id="reset_btn">Reset</button>
+    </section>
+    <section id="input_section">
+        <h2>Criterion</h2>
+        <button id="add_criterion_btn">+</button>
+        <label id="value_lb" for="value_input">Value</label>
+        <label id="description_lb">Description</label>
+        <input id="value_input" type="number" value="0"/>
+        <input id="description_input" type="text"/>
+    </section>
+    <section id="criteria_list_section">
+        <h2>Criteria</h2>
+        <div id="criteria_list_container"></div>
+    </section>
+    <section id="initial_mark_section">
+        <label>Initial mark</label>
+        <input id="initial_mark_input" type="number" min="0" max="999" value="0"/>
+        <p id="explanation_p">
+            For additive marking (achieving a criterion earns points) enter 0<br/>
+            For subtractive marking (failing a criterion loses points) enter the maximum possible grade
+        </p>
+    </section>
+    <script type="module" src="/markaid/src/criteria_management.js"></script>
+</body>
+</html>

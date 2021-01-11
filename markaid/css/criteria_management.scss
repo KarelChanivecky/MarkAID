@@ -1,0 +1,62 @@
+
+
+#control_section {
+    background-color: rgb(247, 123, 7);
+    border-bottom: 3px solid black;
+    color: orange;
+    margin-bottom: 4px;
+}
+
+
+#input_section {
+    display: grid;
+    border-bottom: 1px dotted black;
+    grid-template-areas: 
+    "header . . . ."
+    "btn lb1 . lb2 ."
+    "btn in1 . in2 .";
+    grid-template-columns: 60px 60px 5px 6fr 18fr;
+}
+
+#input_section > button {
+    grid-area: btn;
+    width: 40px;
+    height: 40px;
+}
+
+#input_section > h2 {
+    grid-area: header;
+}
+
+#value_input {
+    grid-area: in1;
+}
+
+#description_input {
+    grid-area: in2;
+    margin-right: 5px;
+}
+
+#value_lb {
+    grid-area: lb1;
+}
+
+#description_lb {
+    grid-area: lb2;
+    margin-right: 20px;
+}
+
+.criteria {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 40px 300px 30px 30px;
+}
+
+.criteria > button {
+    width: 30px;
+    height: 30px;
+}
+
+#initial_mark_input {
+    width: 40px;
+}

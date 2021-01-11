@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markaid - Criteria Management</title>
+    <link rel="stylesheet" href="css/marking.scss">
+    <link rel="stylesheet" href="css/common.scss">
+</head>
+
+<body>
+    <section id="top">
+    <h1 class="title">MarkAID</h1>
+        <p>Karel Chanivecky 2021</p>
+    </section>
+    <section>
+        <h2>Criteria</h2>
+        <div id="criteria_list_container"></div>
+    </section>
+    <section>
+        <h2>Additional comments</h2>
+        <input id="comments_input" type="text" />
+    </section>
+    <section>
+        <h2>Marks</h2>
+        <textarea id="marks_textarea"></textarea>       
+    </section>
+    <section>
+        <label>Grade</label>
+        <p id="grade_p"></p>
+    </section>
+    <section id="marking_controls">
+        <button id="copy_btn">Copy</button>
+        <button id="reset_btn">Reset</button>
+        <button id="manage_sheet_btn">Manage marking sheet</button>
+    </section>
+    <script type="module" src="/markaid/src/marking.js"></script>
+</body>
+
+</html>
