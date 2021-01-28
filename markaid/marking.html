@@ -12,14 +12,27 @@
     <section id="top">
     <h1 class="title">MarkAID</h1>
         <p>Karel Chanivecky 2021</p>
+        <section id="marking_controls">
+            <button id="copy_btn">Copy</button>
+            <button id="reset_btn">Reset</button>
+            <button id="manage_sheet_btn">Manage marking sheet</button>
+        </section>
     </section>
     <section>
         <h2>Criteria</h2>
         <div id="criteria_list_container"></div>
     </section>
     <section>
-        <h2>Additional comments</h2>
+        <button id="add_comment">plain comment</button>
+        <br>
+        Clicking the checkboxes will add the comment below right after the criteria_list_container
+        <br>
+        Clicking the plain comment button will add just the comment
+        <div>
+            <h2>Additional comments</h2>
         <input id="comments_input" type="text" />
+        </div>
+        
     </section>
     <section>
         <h2>Marks</h2>
@@ -29,11 +42,7 @@
         <label>Grade</label>
         <p id="grade_p"></p>
     </section>
-    <section id="marking_controls">
-        <button id="copy_btn">Copy</button>
-        <button id="reset_btn">Reset</button>
-        <button id="manage_sheet_btn">Manage marking sheet</button>
-    </section>
+    
     <script type="module" src="/markaid/src/marking.js"></script>
 </body>
 

@@ -39,7 +39,7 @@ function copyBtnHandler() {
 }
 
 function resetBtnHandler() {
-  document.getElementById(MARKS_TEXTAREA_ID).textContent = "";
+  document.getElementById(MARKS_TEXTAREA_ID).value = "";
   let checkbox;
   for (checkbox of document.getElementsByClassName(
     CRITERION_APPLIED_CHECKBOX_CLASSNAME
@@ -72,7 +72,7 @@ function applyCriterion(criterion) {
     if (0 < comments.length) {
        comments = ": " + comments;  
     }
-    textarea.textContent += criterion.description + comments + "\n";
+    textarea.value += criterion.description + comments + "\n";
     updateTotalGrade(parseInt(criterion.value));
   };
 }
@@ -80,7 +80,7 @@ function applyCriterion(criterion) {
 function removeCriterion(criterion) {
   return () => {
     const textarea = document.getElementById(MARKS_TEXTAREA_ID);
-    let appliedCriteria = textarea.textContent.split("\n");
+    let appliedCriteria = textarea.value.split("\n");
     
     const index = appliedCriteria.findIndex(appliedCriterion => {
       const candidate = appliedCriterion.substring(0, criterion.description.length);
@@ -98,7 +98,7 @@ function removeCriterion(criterion) {
       }
     }    
  
-    textarea.textContent = newAppliedCriteriaText;
+    textarea.value = newAppliedCriteriaText;
     updateTotalGrade(0 - parseInt(criterion.value));
   };
 }
